@@ -1,0 +1,42 @@
+{
+  "name": "myprojectss",
+  "description": "roles for myprojectss shashi",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+    "my_second_oracle_cookbok": {
+      "sudo": {
+        "groups": [
+          "oracleadmin",
+          "oracleuser",
+          "oracledba",
+          "oraclemanager",
+          "shashidhar"
+        ],
+        "users": [
+          "ashish",
+          "suresh",
+          "ganesh",
+          "ramesh",
+          "sagar",
+          "nilesh",
+          "Krishna",
+          "hari",
+          "oracle"
+        ]
+      }
+    }
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[myjava]",
+    "recipe[myoracle]",
+    "recipe[my_second_oracle_cookbok]",
+    "recipe[myweblogic]"
+  ],
+  "env_run_lists": {
+
+  }
+}
